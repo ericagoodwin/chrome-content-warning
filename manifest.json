@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome Content Warnings",
+  "description": "Alerts user if loaded page contains certain (user-specified) content",
+  "version": "1.0",
+  "icons": {},
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+        "storage"
+    ],
+
+
+  "content_scripts": [
+    {
+      "matches":["https://*/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

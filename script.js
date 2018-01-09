@@ -39,6 +39,8 @@ function submitNew() {
   displayList();
 }
 
+
+
 //display updated list
 function displayList() {
 chrome.storage.sync.get("myValue", function(result) {
@@ -48,8 +50,11 @@ chrome.storage.sync.get("myValue", function(result) {
 });
 $(".warningList").html("");
 for (var i = 0; i < wordList.length; i++) {
-  $(".warningList").append('<li>' + wordList[i]);
+  $(".warningList").append('<li>' + '<button id="delete">-</button>' + wordList[i]);
+  $("#delete").click(deleteItem);
+};
 }
+
   // chrome.storage.sync.get("nope", function(obj) {
   //   if (obj) {
   //     console.log("true");
@@ -59,8 +64,11 @@ for (var i = 0; i < wordList.length; i++) {
   // })
   //console.log(wordList[0]);
 
-
+function deleteItem() {
+  alert(i);
 }
+
+
 
 /**
 TODO:

@@ -6,3 +6,7 @@ body {
   overflow: scroll;
   text-align: center;
 }
+
+li {
+  text-align: left;
+}
